@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Reservas - Quartos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🏨 Hotel Reservas</div>
+        <nav>
+            <a href="index.html" class="active">Quartos</a>
+            <a href="reservaQuarto.html">Reservas</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="header-section">
+            <h2>Quartos Cadastrados</h2>
+            <button onclick="window.location.href='cadastro.html'">+ Novo Quarto</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nº Quarto</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="listaQuartos">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Executa a listagem assim que a tela abre
+        listarQuartos();
+    </script>
+</body>
+</html>

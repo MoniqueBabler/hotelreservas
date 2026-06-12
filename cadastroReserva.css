@@ -1,0 +1,43 @@
+/* Organização em duas colunas para o formulário e a tabela */
+.grid-reservas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+/* Texto de destaque para o quarto ativo no formulário */
+.quarto-destaque {
+    color: #2563eb;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Ajuste do tamanho máximo do formulário na coluna da esquerda */
+.card-form form {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Agrupamento e espaçamento para os botões do formulário */
+.botoes-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.botoes-grupo button {
+    width: 100%;
+    text-align: center;
+}
+
+/* Responsividade: Se a tela for pequena, empilha o formulário no topo da tabela */
+@media (max-width: 900px) {
+    .grid-reservas {
+        grid-template-columns: 1fr;
+    }
+}

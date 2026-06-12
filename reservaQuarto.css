@@ -1,0 +1,12 @@
+.grid-reservas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .grid-reservas {
+        grid-template-columns: 1fr;
+    }
+}

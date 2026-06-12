@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Reservas - Reservas do Quarto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reservaQuarto.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🏨 Hotel Reservas</div>
+        <nav>
+            <a href="index.html">Quartos</a>
+            <a href="reservaQuarto.html" class="active">Reservas</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="grid-reservas">
+            <div>
+                <form id="formReserva">
+                    <h2>Cadastro de Reserva</h2>
+                    <h3 id="labelQuartoSelecionado" style="color: #2563eb; font-size: 16px; margin-bottom: 10px;"></h3>
+                    
+                    <div class="form-group">
+                        <label for="nomeHospede">Nome do Hóspede</label>
+                        <input type="text" id="nomeHospede" placeholder="Ex: João da Silva" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataEntrada">Data de Entrada</label>
+                        <input type="date" id="dataEntrada" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dataSaida">Data de Saída</label>
+                        <input type="date" id="dataSaida" required>
+                    </div>
+
+                    <button type="submit">Cadastrar Reserva</button>
+                    <button type="button" class="btn-back" onclick="window.location.href='index.html'">Voltar</button>
+                </form>
+            </div>
+
+            <div>
+                <div class="header-section">
+                    <h2>Reservas do Quarto</h2>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Hóspede</th>
+                            <th>Entrada</th>
+                            <th>Saída</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaReservas">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Inicializa a tela carregando as informações do contexto do quarto ativo
+        inicializarTelaReservas();
+    </script>
+</body>
+</html>
